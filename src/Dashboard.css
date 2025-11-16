@@ -1,10 +1,11 @@
 #panelContainer {
-    display: flex;
-    gap: 1.5rem;
-    width: min(1200px, 100%);
-    margin: 0 auto;
-    min-height: 80vh;
-    align-items: stretch;
+  display: flex;
+  justify-content: center;   
+  gap: 40px;                 
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;         
+  margin: 0 auto; 
   }
   
   @media (max-width: 900px) {
