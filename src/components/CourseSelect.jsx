@@ -1,29 +1,70 @@
+import "./CourseSelect.css";
 import { useState } from "react";
 
-function CourseSelect({ setSelectedCourse, setScreen }) {
-const [course, setCourse] = useState("");
+function CourseSelect({ sessions, setSelectedCourse, setScreen }) {
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    setSelectedCourse(course);
-    setScreen("sessionList");
-};
+  // This stores whatever the user is typing
+    const [search, setSearch] = useState("");
 
-return (
-    <div>
-    <h1>Select Your Course</h1>
+  // Filter sessions based on search box
+    const filteredSessions = sessions.filter(session =>
+    session.course.toLowerCase().includes(search.toLowerCase())
+    );
 
-    <form onSubmit={handleSubmit}>
-        <input 
-        type="text"
-        placeholder="CHEM 154"
-        value={course}
-        onChange={(e) => setCourse(e.target.value)}
+    return (
+        <div className="pageContainer">
+        
+      {/* --- Search + Create Row --- */}
+        <h1>Study Sessions</h1>
+        <div className="searchRow">
+        <input
+            type="text"
+            placeholder="Search for a course..."
+            value={search}
+            onChange={(e) => {
+            setSearch(e.target.value);
+            setSelectedCourse(e.target.value);
+            }}
+            className="searchInput"
         />
-        <button>Find Study Groups</button>
-    </form>
+
+        <button
+            onClick={() => setScreen("createSession")}
+            className="createButton"
+        >
+            + Create Session
+        </button>
+        </div>
+
+      {/* --- Session Cards --- */}
+        
+        <div>
+            <h2>Sessions for: {search}</h2>
+
+            {filteredSessions.length === 0 ? (
+            <p>No sessions found.</p>
+            ) : (
+            filteredSessions.map((session) => (
+                <div
+                key={session.id}
+                className="sessionCard"
+                
+                >
+                <h3>{session.time}</h3>
+                <p><strong>Location:</strong> {session.location}</p>
+                <p><strong>Topics:</strong> {session.topics.join(", ")}</p>
+
+                <button onClick={() => alert("Join coming soon!")}>
+                    Join Session
+                </button>
+                </div>
+            ))
+            )}
+        </div>
+        
     </div>
-);
+    );
 }
 
 export default CourseSelect;
+

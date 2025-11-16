@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState } from 'react'
 import CourseSelect from "./components/CourseSelect";
 import SessionList from "./components/SessionList";
@@ -14,6 +15,7 @@ function App() {
     <div>
       {screen === "selectCourse" && (
         <CourseSelect 
+          sessions={sessions}
           setSelectedCourse={setSelectedCourse} 
           setScreen={setScreen} 
         />
