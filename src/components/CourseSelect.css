@@ -67,7 +67,7 @@ h2 {
 }
 
   /* --- Join Button --- */
-.sessionButton button {
+.sessionButton {
     margin-top: 10px;
     background-color: #f97316;
     border: none;
@@ -78,6 +78,12 @@ h2 {
     transition: 0.2s;
 }
 
-.sessionCard button:hover {
+.sessionButton:hover {
     background-color: #ea580c;
+}
+
+.sessionButton:disabled,
+.sessionButton.joined {
+    background-color: #a1a1a1;
+    cursor: default;
 }

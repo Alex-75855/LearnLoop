@@ -13,11 +13,20 @@ export default function FindSessions() {
   const [selectedCourse, setSelectedCourse] = useState('')
   const [screen, setScreen] = useState('selectCourse')
 
+  function handleJoinSession(sessionId) {
+    setSessions((prevSessions) =>
+      prevSessions.map((session) =>
+        session.id === sessionId ? { ...session, isAttending: true } : session
+      )
+    )
+  }
+
   return (
     <div className="sessionsContainer">
       {screen === 'selectCourse' && (
         <CourseSelect 
           sessions={sessions}
+          onJoinSession={handleJoinSession}
           setSelectedCourse={setSelectedCourse} 
           setScreen={setScreen} 
         />
@@ -26,6 +35,7 @@ export default function FindSessions() {
       {screen === 'sessionList' && (
         <SessionList 
           sessions={sessions}
+          onJoinSession={handleJoinSession}
           selectedCourse={selectedCourse}
           setScreen={setScreen}
         />

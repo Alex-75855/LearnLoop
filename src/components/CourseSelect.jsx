@@ -1,7 +1,7 @@
 import "./CourseSelect.css";
 import { useState } from "react";
 
-function CourseSelect({ sessions, setSelectedCourse, setScreen }) {
+function CourseSelect({ sessions, setSelectedCourse, setScreen, onJoinSession }) {
 
   // This stores whatever the user is typing
     const [search, setSearch] = useState("");
@@ -54,8 +54,12 @@ function CourseSelect({ sessions, setSelectedCourse, setScreen }) {
                 <p><strong>Location:</strong> {session.location}</p>
                 <p><strong>Topics:</strong> {session.topics.join(", ")}</p>
 
-                <button onClick={() => alert("Join coming soon!")}>
-                    Join Session
+                <button
+                  className={`sessionButton${session.isAttending ? ' joined' : ''}`}
+                  onClick={() => onJoinSession(session.id)}
+                  disabled={session.isAttending}
+                >
+                    {session.isAttending ? 'Joined' : 'Join Session'}
                 </button>
                 </div>
             ))
@@ -67,4 +71,3 @@ function CourseSelect({ sessions, setSelectedCourse, setScreen }) {
 }
 
 export default CourseSelect;
-

@@ -48,6 +48,12 @@
   background-color: #ea580c;
 }
 
+.sessionButton:disabled,
+.sessionButton.joined {
+  background-color: #a1a1a1;
+  cursor: default;
+}
+
 .no-sessions {
   color: #555;
   margin-bottom: 12px;
