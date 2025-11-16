@@ -1,22 +1,21 @@
 import './Sessions.css'
 
 import { useState } from 'react'
-import CourseSelect from "./components/CourseSelect";
-import SessionList from "./components/SessionList";
-import CreateSession from "./components/CreateSession";
-import { sampleSessions } from "./data/SampleSessions";
+import CourseSelect from './components/CourseSelect'
+import SessionList from './components/SessionList'
+import CreateSession from './components/CreateSession'
+import { sessions as initialSessions } from './data/data'
 
  
 
 export default function FindSessions() {
-  const [count, setCount] = useState(0)
-  const [sessions, setSessions] = useState(sampleSessions);
-  const [selectedCourse, setSelectedCourse] = useState("");
-  const [screen, setScreen] = useState("selectCourse");
+  const [sessions, setSessions] = useState(initialSessions)
+  const [selectedCourse, setSelectedCourse] = useState('')
+  const [screen, setScreen] = useState('selectCourse')
 
   return (
-    <div className="sessionsContainer" >
-      {screen === "selectCourse" && (
+    <div className="sessionsContainer">
+      {screen === 'selectCourse' && (
         <CourseSelect 
           sessions={sessions}
           setSelectedCourse={setSelectedCourse} 
@@ -24,7 +23,7 @@ export default function FindSessions() {
         />
       )}
 
-      {screen === "sessionList" && (
+      {screen === 'sessionList' && (
         <SessionList 
           sessions={sessions}
           selectedCourse={selectedCourse}
@@ -32,7 +31,7 @@ export default function FindSessions() {
         />
       )}
 
-      {screen === "createSession" && (
+      {screen === 'createSession' && (
         <CreateSession 
           sessions={sessions}
           setSessions={setSessions}
