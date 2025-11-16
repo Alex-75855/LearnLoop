@@ -1,6 +1,6 @@
 import "./SessionList.css";
 
-function SessionList({ sessions, selectedCourse, setScreen, onJoinSession }) {
+function SessionList({ sessions, selectedCourse, setScreen, onStartJoin }) {
   const filtered = sessions.filter(
     (s) => s.course.toLowerCase() === selectedCourse.toLowerCase()
   );
@@ -33,7 +33,7 @@ function SessionList({ sessions, selectedCourse, setScreen, onJoinSession }) {
 
           <button
             className={`sessionButton${session.isAttending ? ' joined' : ''}`}
-            onClick={() => onJoinSession(session.id)}
+            onClick={() => onStartJoin(session)}
             disabled={session.isAttending}
           >
             {session.isAttending ? 'Joined' : 'Join'}
