@@ -3,7 +3,7 @@ import { useState } from 'react'
 import CourseSelect from "./components/CourseSelect";
 import SessionList from "./components/SessionList";
 import CreateSession from "./components/CreateSession";
-import { sampleSessions } from "./data/sampleSessions";
+import { sampleSessions } from "./data/SampleSessions";
 
 function App() {
   const [count, setCount] = useState(0)
