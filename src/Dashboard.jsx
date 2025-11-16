@@ -8,5 +8,5 @@ export default function Dashboard() {
       <SessionsPanel />
       <FriendsPanel />
     </div>
-  )
+  ) 
 }
