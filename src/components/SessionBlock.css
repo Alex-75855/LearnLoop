@@ -1,39 +1,78 @@
+.sessionBlockContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem 1.75rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 15px 25px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+}
+
+.column{
+    flex: 1 1 60%;
+}
+
 .courseInformation{
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
 }
 
-
-.courseInformation, h2, h4{
-    display: block;
-    margin: 5px;
+.courseInformation h2{
+    margin: 0;
+    font-size: 1.25rem;
 }
+
+.courseInformation h4{
+    margin: 0;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .attendees{
     display: flex;
     align-items: center;
-    padding: 6px;
+    padding-top: 0.5rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
-.inlineOrganizerPictureContainer{
-    height: 38px;
-    width: 38px;
-    border-radius: 50%;
-    overflow: hidden;
+
+.sessionBlockLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.attendeesStack{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    margin-right: 5px;
+    gap: 0;
 }
+
+.inlineOrganizerPictureContainer,
 .inlineFriendPictureContainer{
-    height: 28px;
-    width: 28px;
-    margin-left: -11px;
+    height: 42px;
+    width: 42px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f0f0f0;
+    background: #1b1b1b;
+    border: 2px solid #121212;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.inlineFriendPictureContainer{
+    margin-left: -12px;
+}
+
+.inlineFriendPictureContainer:first-of-type{
+    margin-left: 0;
 }
 
 .inlineFriendPicture{
@@ -43,38 +82,22 @@
     object-position: center;
 }
 
-.sessionBlockContainer{
-    display: flex;
-    align-items: flex-start;
-    gap: 4%;
-}
-.column{
-    
-}
 .column2{
+    flex: 0 0 40%;
     display: flex;
-    flex-direction: column;   
-    flex-wrap: wrap;          
-    max-height: 150px;            
-}
-
-.column3{
-    display: flex;
-    margin-left: auto;
-    background-color: aqua;
-    width: 100%
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-content: flex-start;
 }
 
 .topic{
-    background-color: rgb(78, 78, 78);
-    opacity: 70%;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    padding: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 9px;
-    display: block;
-    align-items: center;
-    margin: 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.9rem;
+    white-space: nowrap;
 }

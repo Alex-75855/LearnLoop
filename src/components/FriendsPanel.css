@@ -2,40 +2,44 @@
   flex: 1 1 35%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  background-color: var(--panel-bg);
+  gap: 1.75rem;
+  background: rgba(28, 28, 28, 0.95);
   border-radius: var(--panel-border-radius);
   padding: 2.75rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-sizing: border-box;
-  max-height: 100%;
+  box-shadow: 0 35px 60px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  align-self: stretch;
+  min-height: 100%;
 }
 
 .friends-panel h2 {
-  margin: 1%;
+  margin: 0;
   font-size: 1.4rem;
   text-align: left;
 }
 
 .friends-panel .myProfile {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .friends-list {
   list-style: none;
-  padding: 1rem;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  overflow-y: auto;
+  gap: 1.25rem;
   align-items: flex-start;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.35rem;
 }
 
 .friends-list li {
   margin: 0;
-}
-
-.spacer {
-  height: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }

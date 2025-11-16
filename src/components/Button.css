@@ -1,12 +1,22 @@
 .button {
-    display: flex;
-    height: 80px;
-    width: 150px;
-    border-radius: 20px;
-    background-color: burlywood;
-    flex-direction: column;
-    align-content: center;
+    display: inline-flex;
+    height: 54px;
+    min-width: 165px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    align-items: center;
     justify-content: center;
     text-align: center;
-    
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 18px 28px rgba(249, 115, 22, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0 2rem;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 32px rgba(249, 115, 22, 0.45);
 }

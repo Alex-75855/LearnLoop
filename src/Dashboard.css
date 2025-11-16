@@ -1,13 +1,15 @@
 #panelContainer {
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: none; 
   display: flex;
-  gap: 1.5rem;
+  gap: 1.75rem;
   width: 100%;
-  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh - 3rem);
   align-items: stretch;
   justify-content: center;
   margin: 0 auto;
-  padding: clamp(0.5rem, 1vh, 6vh) clamp(0.5rem, 4vw, 12vw);
+  padding: clamp(1rem, 4vh, 6vh) clamp(1rem, 5vw, 12vw);
   box-sizing: border-box;
+  background: radial-gradient(circle at top, rgba(249, 115, 22, 0.35), transparent 55%),
+              radial-gradient(circle at bottom, rgba(79, 70, 229, 0.25), transparent 50%);
 }

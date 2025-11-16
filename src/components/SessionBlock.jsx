@@ -1,8 +1,8 @@
 import './SessionBlock.css'
 import { people } from '../data/data';
-import Button from './Button';
 
 export default function SessionBlock({ session }) {
+  const topics = session.topics || [];
   return (
     <div className="sessionBlockContainer">
       <div className="column">
@@ -13,29 +13,31 @@ export default function SessionBlock({ session }) {
         </div>
 
         <div className="attendees">
-            <div className='inlineOrganizerPictureContainer'>
-            <img className="inlineFriendPicture"
-                    src={people[session.organizerId].picture}
-                    alt={people[session.organizerId].name}
-                    />
-            </div>
-                {session.attendees.map(id => {
-                const person = people.find(p => p.id === id);
-                return (
-                    <div className="inlineFriendPictureContainer">
-                        <img className="inlineFriendPicture"
-                        key={id}
-                        src={person.picture}
-                        alt={person.name}
+            <span className="sessionBlockLabel">Study Crew</span>
+            <div className='attendeesStack'>
+              <div className='inlineOrganizerPictureContainer'>
+                <img className="inlineFriendPicture"
+                        src={people[session.organizerId].picture}
+                        alt={people[session.organizerId].name}
                         />
-                    </div>
-                );
-                })}
+              </div>
+              {(session.attendees || []).map(id => {
+              const person = people.find(p => p.id === id);
+              return (
+                  <div className="inlineFriendPictureContainer" key={id}>
+                      <img className="inlineFriendPicture"
+                      src={person.picture}
+                      alt={person.name}
+                      />
+                  </div>
+              );
+              })}
+          </div>
         </div>
       </div>
 
       <div className="column2">
-            {session.topics.map((topic, index) => (
+            {topics.map((topic, index) => (
             <p key={index} className='topic'>{topic}</p>
             ))}
         </div>

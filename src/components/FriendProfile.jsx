@@ -1,12 +1,7 @@
 import './FriendProfile.css'
-
-
-import './FriendProfile.css'
 import { sessions } from "../data/data";
 
 export default function FriendProfile({ person }) {
-
-  // Count how many sessions this person is attending
   const attendanceCount = sessions.filter(
     session => session.attendees.includes(person.id)
   ).length;
@@ -14,18 +9,20 @@ export default function FriendProfile({ person }) {
   return (
     <div className="friendProfile">
       <div className="friendProfilePictureContainer">
-        <img className="friendProfilePicture" src={person.picture} />
+        <img className="friendProfilePicture" src={person.picture} alt={person.name} />
       </div>
 
       <div className="friendInformation">
         <h2>{person.name}</h2>
+        <p className="friendSubtitle">{person.major}</p>
 
-        <p>
+        <p className="friendSessions">
           Sessions attending:{" "}
-          {attendanceCount > 0 ? attendanceCount : "None"}
+          <span className="friendSessionsCount">
+            {attendanceCount > 0 ? attendanceCount : "None"}
+          </span>
         </p>
       </div>
     </div>
   );
 }
-
