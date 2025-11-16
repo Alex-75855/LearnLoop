@@ -1,3 +1,5 @@
+import"./SessionList.css";
+
 function SessionList({ sessions, selectedCourse, setScreen }) {
     const filtered = sessions.filter(
     s => s.course.toLowerCase() === selectedCourse.toLowerCase()
