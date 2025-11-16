@@ -1,3 +1,4 @@
+import "./CreateSession.css";
 import { useState } from "react";
 
 function CreateSession({ sessions, setSessions, setScreen, selectedCourse }) {

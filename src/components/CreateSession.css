@@ -1,0 +1,53 @@
+/* Container Styling */
+div {
+    max-width: 650px;
+    margin: 300 auto;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+font-size: 28px;
+margin-bottom: 30px;
+text-align: center;
+}
+
+/* Form layout */
+form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+
+/* Input styling */
+input {
+padding: 12px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 6px;
+transition: border 0.2s ease;
+}
+
+
+input:focus {
+border-color: #4CAF50;
+outline: none;
+}
+
+/* Button Styling */
+button {
+padding: 12px 18px;
+background-color: #5cb05f;
+color: white;
+border: 1px solid transparent;
+font-size: 15px;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+background-color: #4c954f;
+border-color: #9aff9d;
+}
