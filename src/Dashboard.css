@@ -1,15 +1,13 @@
 #panelContainer {
+  overflow-y: scroll;
+  scrollbar-width: none; 
   display: flex;
-  justify-content: center;   
-  gap: 40px;                 
-  padding: 40px;
+  gap: 1.5rem;
   width: 100%;
-  max-width: 1200px;         
-  margin: 0 auto; 
-  }
-  
-  @media (max-width: 900px) {
-    #panelContainer {
-      flex-direction: column;
-    }
-  }
+  min-height: calc(100vh - 4rem);
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 auto;
+  padding: clamp(0.5rem, 1vh, 6vh) clamp(0.5rem, 4vw, 12vw);
+  box-sizing: border-box;
+}

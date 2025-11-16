@@ -1,19 +1,39 @@
 .friendProfile {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: min(100%, 360px);
+  margin: 0 auto;
 }
 
-.friendProfilePicture{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+.friendInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.25rem;
 }
 
-.friendInformation{
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    text-align: left;
+.friendInformation h2,
+.friendInformation p {
+  margin: 0;
+}
+
+.friendProfilePictureContainer {
+  height: 90px;
+  width: 92px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+}
+
+.friendProfilePicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

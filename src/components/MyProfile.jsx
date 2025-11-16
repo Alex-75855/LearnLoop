@@ -3,10 +3,11 @@ import './MyProfile.css'
 export default function MyProfile() {
   return (
     <div className="myProfile">
-      <img className="myProfilePicture" src="https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"/>
+      <div className="myProfilePictureContainer">
+        <img className="myProfilePicture" src="https://static.vecteezy.com/system/resources/previews/053/630/732/non_2x/a-man-in-a-suit-and-tie-smiling-photo.jpeg"/>
+      </div>
       <div className="myInformation">
-        <h2>My Name</h2>
-        <p>Some text about me</p>
+        <h2>John Doe</h2>
       </div>
     </div>
   );

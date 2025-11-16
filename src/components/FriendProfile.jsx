@@ -1,13 +1,31 @@
 import './FriendProfile.css'
 
-export default function FriendProfile() {
+
+import './FriendProfile.css'
+import { sessions } from "../data/data";
+
+export default function FriendProfile({ person }) {
+
+  // Count how many sessions this person is attending
+  const attendanceCount = sessions.filter(
+    session => session.attendees.includes(person.id)
+  ).length;
+
   return (
     <div className="friendProfile">
-      <img className="friendProfilePicture" src="https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"/>
+      <div className="friendProfilePictureContainer">
+        <img className="friendProfilePicture" src={person.picture} />
+      </div>
+
       <div className="friendInformation">
-        <h2>Friend Name</h2>
-        <p>Some text about friend</p>
+        <h2>{person.name}</h2>
+
+        <p>
+          Sessions attending:{" "}
+          {attendanceCount > 0 ? attendanceCount : "None"}
+        </p>
       </div>
     </div>
   );
 }
+
