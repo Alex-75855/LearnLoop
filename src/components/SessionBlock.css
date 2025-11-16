@@ -1,0 +1,80 @@
+.courseInformation{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.courseInformation, h2, h4{
+    display: block;
+    margin: 5px;
+}
+.attendees{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+.inlineOrganizerPictureContainer{
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    margin-right: 5px;
+}
+.inlineFriendPictureContainer{
+    height: 28px;
+    width: 28px;
+    margin-left: -11px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.inlineFriendPicture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sessionBlockContainer{
+    display: flex;
+    align-items: flex-start;
+    gap: 4%;
+}
+.column{
+    
+}
+.column2{
+    display: flex;
+    flex-direction: column;   
+    flex-wrap: wrap;          
+    max-height: 150px;            
+}
+
+.column3{
+    display: flex;
+    margin-left: auto;
+    background-color: aqua;
+    width: 100%
+}
+
+.topic{
+    background-color: rgb(78, 78, 78);
+    opacity: 70%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 9px;
+    display: block;
+    align-items: center;
+    margin: 8px;
+}
