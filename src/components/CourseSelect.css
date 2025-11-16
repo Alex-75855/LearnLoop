@@ -67,7 +67,7 @@ h2 {
 }
 
   /* --- Join Button --- */
-.sessionCard button {
+.sessionButton button {
     margin-top: 10px;
     background-color: #f97316;
     border: none;

@@ -1,35 +1,48 @@
+import "./SessionList.css";
+
 function SessionList({ sessions, selectedCourse, setScreen }) {
-    const filtered = sessions.filter(
-    s => s.course.toLowerCase() === selectedCourse.toLowerCase()
-    );
+  const filtered = sessions.filter(
+    (s) => s.course.toLowerCase() === selectedCourse.toLowerCase()
+  );
 
-    return (
-    <div>
-        <h1>Study Sessions for {selectedCourse}</h1>
+  return (
+    <div className="session-list-container">
+      <h1>Study Sessions for {selectedCourse}</h1>
 
-        {filtered.length === 0 && (
+      {filtered.length === 0 && (
         <>
-            <p>No sessions found.</p>
-            <button onClick={() => setScreen("createSession")}>
+          <p className="no-sessions">No sessions found.</p>
+          <button
+            className="create-button"
+            onClick={() => setScreen("createSession")}
+          >
             Create Your Own Study Group
-            </button>
+          </button>
         </>
-        )}
+      )}
 
-        {filtered.map(session => (
+      {filtered.map((session) => (
         <div key={session.id} className="card">
-            <h2>{session.time}</h2>
-            <p><strong>Location:</strong> {session.location}</p>
-            <p><strong>Topics:</strong> {session.topics.join(", ")}</p>
-            <button>Join</button>
-        </div>
-        ))}
+          <h2>{session.time}</h2>
+          <p>
+            <strong>Location:</strong> {session.location}
+          </p>
+          <p>
+            <strong>Topics:</strong> {session.topics.join(", ")}
+          </p>
 
-        <button onClick={() => setScreen("createSession")}>
+          <button className="sessionButton">Join</button>
+        </div>
+      ))}
+
+      <button
+        className="create-button"
+        onClick={() => setScreen("createSession")}
+      >
         Create New Session
-        </button>
+      </button>
     </div>
-    );
+  );
 }
 
 export default SessionList;
