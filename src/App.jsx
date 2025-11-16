@@ -1,14 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 
-import FriendsPanel from './components/FriendsPanel'
-import SessionsPanel from './components/SessionsPanel'
+import Dashboard from './Dashboard'
+import FindSessions from './Sessions';
 
 function App() {
   return (
-    <div id="panelContainer">
-      <SessionsPanel />
-      <FriendsPanel />
-    </div>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/Find_Sessions" element={<FindSessions />} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 

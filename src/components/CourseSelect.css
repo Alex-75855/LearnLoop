@@ -1,0 +1,83 @@
+/* --- Page Container --- */
+.pageContainer {
+    max-width: 650px;
+    margin: 300 auto;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    
+}
+  /* --- Search Row --- */
+.searchRow {
+    display: flex;
+    gap: 42px;
+    margin-bottom: 25px;
+}
+
+  /* --- Search Input --- */
+.searchInput {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0px 0px 4px rgba(79, 70, 229, 0.5);
+}
+  /* --- Create Course Button --- */
+.createButton {
+    padding: 12px 18px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.createButton:hover {
+    background-color: #3d37b4;
+}
+
+  /* --- Section Title --- */
+h2 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+  /* --- Session Cards --- */
+.sessionCard {
+    background: #4f46e5;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    transition: 0.2s;
+    color:white;
+}
+
+.sessionCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+  /* --- Join Button --- */
+.sessionCard button {
+    margin-top: 10px;
+    background-color: #f97316;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sessionCard button:hover {
+    background-color: #ea580c;
+}
