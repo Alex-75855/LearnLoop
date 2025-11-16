@@ -1,0 +1,17 @@
+.myProfile {
+    display: flex;
+    align-items: center;
+}
+
+.myProfilePicture{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.myInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}

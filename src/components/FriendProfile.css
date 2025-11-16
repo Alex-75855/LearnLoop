@@ -1,0 +1,19 @@
+.friendProfile {
+    display: flex;
+    align-items: center;
+}
+
+.friendProfilePicture{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.friendInformation{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}

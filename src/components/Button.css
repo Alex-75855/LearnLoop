@@ -1,0 +1,12 @@
+.button {
+    display: flex;
+    height: 80px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: burlywood;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    
+}
